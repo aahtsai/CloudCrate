@@ -63,12 +63,24 @@
      min-height: 1px;
      margin: 0 2% 20px;
  }
+ /* ----------- iPhone 6+ ----------- */
+ /* Portrait and Landscape */
+ 
+ @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {}
+ /* Portrait */
+ 
+ @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+ /* Landscape */
+ 
+ @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {}
+ /* ----------- Tablets ----------- */
  
  @media (min-width: 768px) {
      .container {
          width: 750px;
      }
  }
+ /* ----------- Laptops ----------- */
  
  @media (min-width: 992px) {
      .container {
@@ -84,6 +96,7 @@
          width: 21%;
      }
  }
+ /* ----------- Desktops ----------- */
  
  @media (min-width: 1200px) {
      .container {
@@ -168,4 +181,32 @@
      background: #2ECC71;
      border: 2px solid #2ECC71;
      box-shadow: 0px 2px 0px 0px #22894E;
+ }
+ /* BENEFITS */
+ 
+ .benefits {
+     text-align: center;
+     display: block;
+     position: relative;
+ }
+ 
+ .benefits ul {
+     margin: 0 auto;
+     padding: 4em 0;
+ }
+ 
+ .benefits ul li {
+     list-style-type: none;
+     display: inline-block;
+ }
+ 
+ .benefits i {
+     color: #3498DB;
+     font-size: 60px;
+     margin: 0;
+     vertical-align: middle;
+ }
+ 
+ .benefits h2 {
+     color: #3498DB;
  }
