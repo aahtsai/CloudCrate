@@ -15,8 +15,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/dropit.css">
 
     <body class="dashboard">
+        <!-- RESPONSIVE NAV -->
+        <a class="hamburger" id="menu" href="#">&#9776;</a>
         <!-- LEFT NAV -->
         <nav id="left-nav" class="left-nav">
             <a href="#" class="site-logo"><img class="resize" src="images/Logo.png" /></a>
@@ -48,7 +51,11 @@
                 <div class="container">
                     <div class="header">
                         <h1>All Items</h1>
-                        <a href="#" class="btn">+ Add</a>
+                        <ul class="menu">
+                            <ul class="addbutton">
+                                <a href="#">+ Add</a>
+                            </ul>
+                        </ul>
                     </div>
                 </div>
                 <div class="container">
@@ -122,6 +129,14 @@
                 </div>
             </section>
         </main>
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script src="js/dropit.js"></script>
+        <script type="text/javascript">
+            $(".menu").dropit();
+            $("#menu").click(function () {
+                $("#left-nav").toggleClass("open", 200);
+            });
+        </script>
     </body>
 
 </head>
