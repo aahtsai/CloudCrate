@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/dropit.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <body class="dashboard">
         <!-- RESPONSIVE NAV -->
@@ -41,7 +42,16 @@
             <div class="settings">
                 <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
                 <p>Joey Kirk</p>
-                <a href="#"><i class="fa fa-cog"></i></a>
+                <ul class="settings-btn dropit-inverse">
+                    <li>
+                        <a href="#"><i class="fa fa-cog" id="settings-btn"></i></a>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-file-o"></i> My Account</a></li>
+                            <li><a href="#"><i class="fa fa-picture-o"></i> My Collaborators</a></li>
+                            <li><a href="#"><i class="fa fa-sign out"></i> Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </nav>
 
@@ -51,10 +61,15 @@
                 <div class="container">
                     <div class="header">
                         <h1>All Items</h1>
-                        <ul class="menu">
-                            <ul class="addbutton">
-                                <a href="#">+ Add</a>
-                            </ul>
+                        <ul class="dropdown-btn">
+                            <li>
+                                <a href="#" class="btn dropit">+ Add</a>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-file-o"></i> Note</a></li>
+                                    <li><a href="#"><i class="fa fa-picture-o"></i> Image</a></li>
+                                    <li><a href="#"><i class="fa fa-link"></i> Link</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -129,10 +144,11 @@
                 </div>
             </section>
         </main>
-        <script src="js/jquery-2.1.3.min.js"></script>
-        <script src="js/dropit.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="dropit.js"></script>
         <script type="text/javascript">
-            $(".menu").dropit();
+            $(".dropdown-btn").dropit();
+            $(".settings-btn").dropit();
             $("#menu").click(function () {
                 $("#left-nav").toggleClass("open", 200);
             });
