@@ -42,7 +42,7 @@
             <div class="settings">
                 <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
                 <p>Joey Kirk</p>
-                <ul class="settings-btn dropit-inverse">
+                    <ul class="settings-btn dropit-inverse">
                     <li>
                         <a href="#"><i class="fa fa-cog" id="settings-btn"></i></a>
                         <ul>
@@ -61,10 +61,10 @@
                 <div class="container">
                     <div class="header">
                         <h1>All Items</h1>
-                        <ul class="dropdown-btn">
-                            <li>
-                                <a href="#" class="btn dropit">+ Add</a>
-                                <ul>
+                        <ul class="dropdown-btn dropit">
+                            <li class="dropit-trigger">
+                                <a href="#" class="btn">+ Add</a>
+                                <ul class="dropit-submenu">
                                     <li><a href="#"><i class="fa fa-file-o"></i> Note</a></li>
                                     <li><a href="#"><i class="fa fa-picture-o"></i> Image</a></li>
                                     <li><a href="#"><i class="fa fa-link"></i> Link</a></li>
@@ -144,14 +144,14 @@
                 </div>
             </section>
         </main>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script src="dropit.js"></script>
-        <script type="text/javascript">
-            $(".dropdown-btn").dropit();
-            $(".settings-btn").dropit();
-            $("#menu").click(function () {
-                $("#left-nav").toggleClass("open", 200);
-            });
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+ <script src="js/dropit.js"></script>
+ <script type="text/javascript">
+  $(".dropdown-btn").dropit();
+  $(".settings-btn").dropit();
+     $( "#menu" ).click(function() {
+         $("#left-nav").toggleClass("open", 200);
+     });
         </script>
     </body>
 
